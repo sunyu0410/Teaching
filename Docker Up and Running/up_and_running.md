@@ -11,7 +11,7 @@
 * Execute an image in a runtime session: this is called a **container**. A container will be stopped once you exit from it.
 
 ## Example
-Say on Ronin Ubuntu 20.04 we want to get a Python 3.10 on a Ubuntu 18.04.
+Say on Ronin Ubuntu 20.04 we want to get a Python 3.10 on a Ubuntu 18.04 with some packages.
 
 1. Install Docker
 ```shell
@@ -65,9 +65,6 @@ RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 
 RUN pip install SimpleITK pydicom
-#RUN rm /usr/bin/python3 && ln -s /usr/bin/python3.10 /usr/bin/python3
-#RUN pip3 install SimpleITK
-#RUN pip3 install pydicom
 ```
 
 3. Build the image
